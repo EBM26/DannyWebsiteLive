@@ -8,7 +8,6 @@
 	<title>Dr. Danny Benmoshe - Neurologist in Santa Monica - Headache Specialist</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"/>
 	<link rel="stylesheet" href="style.css" />
-	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -229,7 +228,10 @@
 									<div class="form-row">
 										<div class="form-controls">
 											<textarea class="textarea unfocus" name="message" id="field-message" placeholder="Message"></textarea>
-											<div class="g-recaptcha" data-sitekey="6Le-0QgUAAAAAALchssW938B7r-a6b1nBISlObqK"></div>
+											<div class="g-recaptcha" data-sitekey="6Le-0QgUAAAAAALchssW938B7r-a6b1nBISlObqK" data-callback="correctCaptcha"></div>
+											<div id="recapError">
+												<p>Please Click the reCaptcha box to verify</p>
+											</div>
 										</div><!-- /.form-controls -->
 									</div><!-- /.form-row -->
 									
@@ -896,5 +898,7 @@
 													<script src="assets/javascripts/vendor.js"></script>
 													<script src="assets/javascripts/jquery.stellar.min.js"></script>
 													<script src="assets/javascripts/app.js"></script>
+													  <script src="https://www.google.com/recaptcha/api.js"></script>
+													  </script>
 												</body>
 												</html>

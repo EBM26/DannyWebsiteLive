@@ -1,7 +1,26 @@
+  <?php
+  require_once "recaptchalib.php";
 
-<?php 
+  // foreach ($_POST as $key => $value) {
+  //   echo '<p><strong>' . $key.':</strong> '.$value.'</p>';
+  //  }
+ 
 		if(isset($_POST['submit'])) {
-			$name = $_POST['name'];
+			$secret = "6Le-0QgUAAAAAP_2m3fGCNDVfM_ffYnHW8O53Yau";
+			$response = null;
+			$reCaptcha = new ReCaptcha($secret);
+
+			if ($_POST["g-recaptcha-response"]) {
+    		$response = $reCaptcha->verifyResponse(
+        	$_SERVER["REMOTE_ADDR"],
+        	$_POST["g-recaptcha-response"]
+    		);
+			}
+
+			if ($response != null && $response->success) {
+    		echo "Hi " . $_POST["name"] . " (" . $_POST["email"] . "), thanks for submitting the form!";
+
+    		$name = $_POST['name'];
 			$visitor_email = $_POST['email'];
 			$message = $_POST['message'];
 			$phone = $_POST['phone'];
@@ -19,12 +38,15 @@
 
 			$email_body .= "</table>";
 			$email_body .= "</body></html>";
-			$to = "ebm2626@yahoo.com"; 
+			$to = "office@drbenmoshe.com"; 
 			$headers = "From: $email_from \r\n";
-			$headers .= 'Cc: mse2626@gmail.com' . "\r\n";
+			$headers .= 'Cc: drbenmoshe@drbenmoshe.com' . "\r\n";
 			$headers .= "Reply-To: $visitor_email \r\n";
 			$headers .= "MIME-Version: 1.0\r\n";
 			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+			mail($to, $email_subject, $email_body, $headers);
+ 			 } else {}
+
 	
 		}
 

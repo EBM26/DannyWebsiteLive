@@ -8,7 +8,6 @@
 	<title>Dr. Danny Benmoshe - Neurologist in Santa Monica - Headache Specialist</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"/>
 	<link rel="stylesheet" href="style.css" />
-	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -174,32 +173,79 @@
 			</div><!-- /.intro-slider -->
 		</div><!-- /.intro -->
 </div>
-		<div class="main" style="padding-bottom: 0;">
+		<div class="main">
 
 			<!-- Book appointment -->
-			<section class="section section-book-appointment" style="padding-bottom: 0;" id="section-book-appointment">
+			<section class="section section-book-appointment" id="section-book-appointment">
 				<div class="section-ribbon">
 					<i class="icon-medical-checklist"></i>
 				</div><!-- /.section-ribbon -->
 
 				<div class="section-body">
 					<div class="form-appointment">
+						<form action="contact.php" method="post" class="contact-form">
 							<header class="form-head row">
 
 
 								<div class="columns large-12 medium-12">
 									<h2>Book an Appointment</h2>
+									<h6>It's easy and fast</h6>
 								</div><!-- /.columns large-6 -->
 
 
 							</header><!-- /.form-head -->
 
+							<div class="form-body">
+								<div class="row">
+									<div class="form-row">
+										<div class="form-cols clearfix">
+											<div class="form-col form-col-1of4">
+												<div class="form-controls">
+													<input type="text" class="field unfocus" name="name" id="field-name" value="" placeholder="Full Name" />
+												</div><!-- /.form-controls -->
+											</div><!-- /.form-col form-col-1of4 -->
+
+											<div class="form-col form-col-1of4">
+												<div class="form-controls">
+													<input type="email" class="field unfocus" name="email" id="field-email" value="" placeholder="Your Email Address" />
+												</div><!-- /.form-controls -->
+											</div><!-- /.form-col form-col-1of4 -->
+
+											<div class="form-col form-col-1of4">
+												<div class="form-controls">
+													<input type="tel" class="field unfocus" name="phone" id="field-tel" value="" placeholder="Phone Number" />
+												</div><!-- /.form-controls -->
+											</div><!-- /.form-col form-col-1of4 -->
+
+											<div class="form-col form-col-1of4">
+												<div class="form-controls form-controls-data-field unfocus">
+													<input type="text" class="field field-date" name="date" id="field-date" value="" placeholder="Booking Date" />
+												</div><!-- /.form-controls -->
+											</div><!-- /.form-col form-col-1of4 -->
+										</div><!-- /.form-cols -->
+									</div><!-- /.form-row -->
+
+									<div class="form-row">
+										<div class="form-controls">
+											<textarea class="textarea unfocus" name="message" id="field-message" placeholder="Message"></textarea>
+											<div class="g-recaptcha" data-sitekey="6Le-0QgUAAAAAALchssW938B7r-a6b1nBISlObqK" data-callback="correctCaptcha"></div>
+											<div id="recapError">
+												<p>Please Click the reCaptcha box to verify</p>
+											</div>
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-row -->
+									
+									<div class="form-actions">
+										<input type="submit" value="Book now" name="submit" class="button btn-light-blue btn-smalla6l" /><br>
+										<p class="espanol mobile-spanish">Se Habla Español</p>
+									</div><!-- /.form-actions -->
 
 								</div><!-- /.row -->
 							</div><!-- /.form-body -->
-					</div><!-- /.form-appoitment -->
+						</form>
+					</div><br><br><!-- /.form-appoitment -->
 
-					<h6 class="text-center or-click">Just click this link to book with <a href="https://www.zocdoc.com/practice/benmoshe-danny-43021" target="_blank">Zocdoc  <img src="assets/images/zocdoclogo2.png" alt="ZocDoc logo and link" class="ZocDoc"></a><br><br>
+					<h6 class="text-center or-click">Or click this link to book with <a href="https://www.zocdoc.com/practice/benmoshe-danny-43021" target="_blank">Zocdoc  <img src="assets/images/zocdoclogo2.png" alt="ZocDoc logo and link" class="ZocDoc"></a><br><br>
 					<p class="note"><i>Note: for urgent, same day appointments (if available), please call our office directly at <span class="urgent-phone"><a href='tel: 310 315 1456'>310-315-1456</a></span></i></p></h6>
 				</div><!-- /.section-body -->
 			</section><!-- /.section-book-appointment -->
@@ -767,7 +813,7 @@
 															</section><!-- /.section-updates -->
 														</div><!-- /.main -->
 
-														<div class="footer" style="position: relative;">
+														<div class="footer">
 															<div class="row">
 																<div class="columns large-4 medium-12">
 																	<h5>Dr. Benmoshe</h5>
@@ -852,5 +898,7 @@
 													<script src="assets/javascripts/vendor.js"></script>
 													<script src="assets/javascripts/jquery.stellar.min.js"></script>
 													<script src="assets/javascripts/app.js"></script>
+													  <script src="https://www.google.com/recaptcha/api.js"></script>
+													  </script>
 												</body>
 												</html>

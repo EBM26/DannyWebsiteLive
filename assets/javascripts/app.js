@@ -334,6 +334,7 @@ var formFunc  = function () {
   var email   = $( "input[ name = email ]" ).val()
   var date    = $( "input[ name = date ]" ).val()
   var message = $( "textarea" ).val()
+  var response = grecaptcha.getResponse();
 
   if ( name === "" ) {
 	$("#field-name").addClass('error')
@@ -355,8 +356,11 @@ var formFunc  = function () {
   	$("#field-message").addClass('error')
   	event.preventDefault();
     return
+  } else if ( !response ) {
+	$("#recapError").show();
+  	event.preventDefault();
+    return
   }
-
 }
 
 $( "body" ).on( "click", "input[type=submit]", function(){
@@ -369,10 +373,7 @@ $( document ).keypress( function ( e ) {
   }
 })
 
-
-
 // on focus to hide error message
-
 $( "body" ).on( "focus", ".unfocus", function() {
   $( ".unfocus" ).removeClass("error")
 })

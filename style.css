@@ -250,6 +250,7 @@ a:visited, a:active {
 
 .g-recaptcha {margin-top: 20px;}
 
+#recapError{position: absolute; color: red; display: none;}
 /***************** About Page Styling Desktop ******************/
 
 #about-intro {
