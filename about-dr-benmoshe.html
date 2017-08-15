@@ -215,6 +215,53 @@
 					<div class="widgets">
 
 						<div class="widget widget-form">
+
+							<h4>ITS EASY AND FAST</h4>
+
+							<h3>BOOK APPOINTMENT</h3>
+
+							<div class="from-appointment">
+								<form action="contact.php" method="post">
+									<div class="form-row">
+										<div class="form-controls">
+											<input type="text" class="field" required name="name" id="field-name" value="" placeholder="Full Name" />
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-row -->
+
+									<div class="form-row">
+										<div class="form-controls">
+											<input type="email" class="field" required name="email" id="field-email" value="" placeholder="Your Email Address" />
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-row -->
+
+									<div class="form-row">
+										<div class="form-controls">
+											<input type="tel" class="field" required name="phone" id="field-tel" value="" placeholder="Phone Number" />
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-row -->
+
+									<div class="form-row">
+										<div class="form-controls form-controls-data-field">
+											<input type="text" class="field field-date" required name="date" id="field-date" value="" placeholder="Booking Date" />
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-row -->
+
+									<div class="form-row">
+										<div class="form-controls">
+											<textarea class="textarea" required name="message" id="field-message" placeholder="Message"></textarea>
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-row -->
+
+									<div class="form-actions">
+										<input type="submit" value="BOOK APPOINTMENT" class="button btn-white btn-small" name="submit" />
+									</div><!-- /.form-actions -->
+									<div class="g-recaptcha" data-sitekey="6Le-0QgUAAAAAALchssW938B7r-a6b1nBISlObqK" data-callback="correctCaptcha"></div>
+											<div id="recapError">
+												<p>Please Click the reCaptcha box to verify</p>
+											</div>
+								</form>
+							</div><!-- /.from-appointment -->
+						</div><!-- /.widget widget-form -->
 						
 						<div class="widget widget-menu">
 							<h4 class="our-office">Our Office</h4>
@@ -320,5 +367,6 @@
 <script src="assets/javascripts/vendor.js"></script>
 <script src="assets/javascripts/jquery.stellar.min.js"></script>
 <script src="assets/javascripts/app.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>
