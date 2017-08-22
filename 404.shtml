@@ -42,7 +42,7 @@
 							<div class="event-body" itemprop="articleBody">
 								<h1 class="error-title text-center">404</h1>
 								<h2 class="error-subtitle text-center">The page you were looking for could not be found.</h2>
-								<p class="text-center"><a href="index.html">Visit Home Page</a></p>
+								<p class="text-center"><a href="index.html" style="font-weight: bold; font-size: 1.7em;">Visit Home Page</a></p>
 							</div><!-- /.event-body -->
 						</div><!-- /.event-box -->
 					</article><!-- /.event article-single-event -->
