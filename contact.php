@@ -37,9 +37,9 @@
 
 			$email_body .= "</table>";
 			$email_body .= "</body></html>";
-			$to = "ebmghm@gmail.com"; 
+			$to = "benmoshefrontdesk@drbenmoshe.com"; 
 			$headers = "From: $email_from \r\n";
-			$headers .= 'Cc: benmoshefrontdesk@drbenmoshe.com' . "\r\n";
+			$headers .= 'Cc: drbenmoshe@drbenmoshe.com' . "\r\n";
 			$headers .= "Reply-To: $visitor_email \r\n";
 			$headers .= "MIME-Version: 1.0\r\n";
 			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
