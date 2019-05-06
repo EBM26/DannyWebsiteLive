@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117509368-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-117509368-1');
-</script>
-
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 	<meta http-equiv="x-ua-compatible" content="IE=edge" >
@@ -193,6 +183,7 @@
 
 				<div class="section-body">
 					<div class="form-appointment">
+						<form action="contact.php" method="post" class="contact-form">
 							<header class="form-head row">
 
 
@@ -206,14 +197,56 @@
 
 							<div class="form-body">
 								<div class="row">
-								<div class="columns small-12 large-12 medium-12">
-									<!-- <iframe width="100%" height="250px" frameBorder="0" src="https://curogram.com/widget/availabilities/589cdbafbaed1d6904264ac8"></iframe> -->
-									<iframe width="100%" height="520px" frameBorder="0" src="https://curogram.com/widget/chat/589cdbafbaed1d6904264ac8"></iframe>
-								</div>
+									<div class="form-row">
+										<div class="form-cols clearfix">
+											<div class="form-col form-col-1of4">
+												<div class="form-controls">
+													<input type="text" class="field unfocus" name="name" id="field-name" value="" placeholder="Full Name" />
+												</div><!-- /.form-controls -->
+											</div><!-- /.form-col form-col-1of4 -->
+
+											<div class="form-col form-col-1of4">
+												<div class="form-controls">
+													<input type="email" class="field unfocus" name="email" id="field-email" value="" placeholder="Your Email Address" />
+												</div><!-- /.form-controls -->
+											</div><!-- /.form-col form-col-1of4 -->
+
+											<div class="form-col form-col-1of4">
+												<div class="form-controls">
+													<input type="tel" class="field unfocus" name="phone" id="field-tel" value="" placeholder="Phone Number" />
+												</div><!-- /.form-controls -->
+											</div><!-- /.form-col form-col-1of4 -->
+
+											<div class="form-col form-col-1of4">
+												<div class="form-controls form-controls-data-field unfocus">
+													<input type="text" class="field field-date" name="date" id="field-date" value="" placeholder="Booking Date" />
+												</div><!-- /.form-controls -->
+											</div><!-- /.form-col form-col-1of4 -->
+										</div><!-- /.form-cols -->
+									</div><!-- /.form-row -->
+
+									<div class="form-row">
+										<div class="form-controls">
+											<textarea class="textarea unfocus" name="message" id="field-message" placeholder="Message"></textarea>
+											<div class="g-recaptcha" data-sitekey="6Le-0QgUAAAAAALchssW938B7r-a6b1nBISlObqK" data-callback="correctCaptcha"></div>
+											<div id="recapError">
+												<p>Please Click the reCaptcha box to verify</p>
+											</div>
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-row -->
+									
+									<div class="form-actions">
+										<input type="submit" value="Book now" name="submit" class="button btn-light-blue btn-smalla6l" /><br>
+										<p class="espanol mobile-spanish">Se Habla Español</p>
+									</div><!-- /.form-actions -->
+
 								</div><!-- /.row -->
 							</div><!-- /.form-body -->
+						</form>
 					</div><br><br><!-- /.form-appoitment -->
-					<p class="note text-center"><i>Note: for urgent, same day appointments (if available), please call our office directly at <span class="urgent-phone"><a href='tel: 310 315 1456'>310-315-1456</a></span></i></p></h6>
+
+					<h6 class="text-center or-click">Or click this link to book with <a href="https://www.zocdoc.com/practice/benmoshe-danny-43021" target="_blank">Zocdoc  <img src="assets/images/zocdoclogo2.png" alt="ZocDoc logo and link" class="ZocDoc"></a><br><br>
+					<p class="note"><i>Note: for urgent, same day appointments (if available), please call our office directly at <span class="urgent-phone"><a href='tel: 310 315 1456'>310-315-1456</a></span></i></p></h6>
 				</div><!-- /.section-body -->
 			</section><!-- /.section-book-appointment -->
 
@@ -865,5 +898,7 @@
 													<script src="assets/javascripts/vendor.js"></script>
 													<script src="assets/javascripts/jquery.stellar.min.js"></script>
 													<script src="assets/javascripts/app.js"></script>
+													  <script src="https://www.google.com/recaptcha/api.js"></script>
+													  </script>
 												</body>
 												</html>
