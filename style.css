@@ -11917,7 +11917,7 @@ a.logo:hover {
     padding: 20px 0;
   }
   .nav-dropdown li {
-    padding: 0 19px;
+    padding: 0 14px;
   }
 }
 
@@ -11952,7 +11952,7 @@ a.logo:hover {
 @media (max-width: 767px) {
   .header {
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
   }
   .header .columns {
     padding: 0 13px !important;
@@ -14320,7 +14320,6 @@ box-shadow: 13px 13px 9px -8px rgba(136,136,136,1);
   font-family: "Dosis", sans-serif;
   font-size: 24px;
   line-height: 1.08;
-  letter-spacing: 0.05em;
   font-weight: 700;
 }
 
@@ -18945,14 +18944,20 @@ input[type="search"].search-field:-ms-input-placeholder {
    color: #fff !important;
 }
 
+#logo-div{
+  width: 10%;
+}
+
   .logo img {
-    width: 44%;
+    width: 100%;
     max-width: 290px;
     height: auto;
     display: block;
     margin-top: 7px;
-    margin-left: 15%;
+    margin-left: 15px;
   }
+
+#lastHeader{width: 20%; margin-top: -30px;}
 
 #Danny-name {
     font-size: 250%;
